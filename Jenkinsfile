@@ -5,18 +5,22 @@ pipeline {
     triggers {
         pollSCM 'H/15 * * * *'
     }
-    
+
+    tools {
+        maven "Maven"
+        jdk "JDK"
+    }
+
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git branch: 'main', url:'https://github.com/Vinhcognito/ci-pipe1.git'
             }
         }
         
-        stage('Build') {
+        stage('Maven Build') {
             steps {
-                echo 'Building application...'
-                // Add build commands here
+                bat "mvn clean compile"
             }
         }
         
