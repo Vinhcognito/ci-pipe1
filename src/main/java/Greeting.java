@@ -1,5 +1,5 @@
 import java.util.Calendar;
-
+/*
 public class Greeting {
     private static final String COURSE = "COMP367";
 // test
@@ -17,3 +17,5 @@ public class Greeting {
                 COURSE);
     }
 }
+*/
+ 
